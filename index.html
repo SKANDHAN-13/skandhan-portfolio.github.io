@@ -1,0 +1,189 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Skandhan Karthikeyan</title>
+  <meta name="author" content="Skandhan Karthikeyan">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="images/favicon/iron.jpg" type="image/x-icon">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+    body {
+      font-family: 'Lato','Times New Roman',Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+
+
+    .header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .header img {
+      max-width: 250px;
+      width: 100%;
+      border-radius: 50%;
+    }
+    .header h1 {
+      text-align: center;
+      margin: 0;
+    }
+
+    /* Section titles */
+    h2, h1 {
+      margin-top: 40px;
+      margin-bottom: 15px;
+    }
+
+    .project {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 40px;
+      align-items: center;
+    }
+    .project img, .project video {
+      width: 100%;
+      max-width: 280px;
+      border-radius: 8px;
+      display: block;
+    }
+    .project-content {
+      flex: 1;
+      min-width: 250px;
+    }
+    .papertitle {
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    footer {
+      text-align: right;
+      font-size: small;
+      margin-top: 50px;
+    }
+    .profile-photo {
+      display: block;
+      margin: 20px auto; 
+      max-width: 200px;  
+      border-radius: 50%;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);}
+
+   
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        text-align: center;
+      }
+      .project {
+        flex-direction: column;
+        text-align: center;
+      }
+      .project-content {
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    
+     <section class="intro">
+    <div class="header">
+      <div>
+        <h1><b>Skandhan Karthikeyan</b></h1>
+        <p>
+          I'm an incoming Master's Student in Mechanical Engineering and Applied Mechanics with Specializtion in Robotics at the 
+          <a href="https://www.upenn.edu/">University of Pennsylvania</a>.
+        </p>
+        <p>
+          I earned my Bachelor's degree in Mechanical Engineering from the 
+          <a href="https://www.iitm.ac.in/">IIT Madras</a>. During my undergraduate studies, 
+          I interned at <a href="https://www.jswsteel.in/">JSW Steel</a> as a Manufacturing Intern, 
+          where I focused on optimizing industrial processes and ensuring adherence to safety regulations. 
+          I also pursued a research internship at the 
+          <a href="https://danielslab.physics.ncsu.edu/">Daniels Lab</a>, under 
+          <a href="https://danielslab.physics.ncsu.edu/people/karen-daniels/">Prof. Karen E. Daniels</a>, 
+          where I conducted particle-scale measurements of interparticle forces using photoelastic disks. 
+          In parallel, I was an active member of the 
+          <a href="https://cfi.iitm.ac.in/elec-club/">Electronics Club</a>, where I served as an Embedded Systems and Controls Engineer, 
+          later promoted as a team lead for 2023–2024.
+        </p>
+        <p>
+          <a href="Skandhan_Resume_Copy.pdf">Resume</a> &nbsp;/&nbsp;
+          <a href="https://www.linkedin.com/in/skandhan-karthikeyan-3a8683249/">LinkedIn</a> &nbsp;/&nbsp;
+          <a href="https://github.com/SKANDHAN-13">Github</a>
+        </p>
+      </div>
+      <img src="main_page.jpeg.jpg" alt="profile photo" class="profile-photo">
+    </div>
+    </section>
+
+   
+    <h2><b>Research Interests</b></h2>
+    <p>I am interested in applying physics, controls, and machine learning to develop algorithms to control robots.</p>
+
+    
+    <h1><b>Projects</b></h1>
+
+    <div class="project">
+      <img src="firstpic.jpg" alt="Project image">
+      <div class="project-content">
+        <span class="papertitle">LiDAR and Camera-based Navigation Algorithms for Lane-keeping in Unstructured roads</span>
+        <p>Classical Machine learning based system as a lightweight benchmark for future autonomous driving applications.</p>
+        <p><a href="https://docs.google.com/presentation/d/1FxscGQEdtuxn0fhOMtwFjj_2PRtn9-Fi/edit?slide=id.p1#slide=id.p1">[Poster]</a></p>
+      </div>
+    </div>
+
+    <div class="project">
+      <img src="ir.png" alt="Project image">
+      <div class="project-content">
+        <span class="papertitle">Delay compensation in networked robotic systems</span><br>
+        Skandhan K, Shivendra Verma (Guided by: Dr. Anuj Tiwari)
+        <p>Formulated an observer-based feedback control algorithm to compensate for network delays in mobile, ground robots.</p>
+      </div>
+    </div>
+
+    <div class="project">
+      <video autoplay muted loop playsinline controls>
+        <source src="https://drive.google.com/uc?export=download&id=1RjbRGT3f61-P5YHyZEA23d159E_VxiJB" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="project-content">
+        <span class="papertitle">Autonomous factory: Additive manufacturing</span><br>
+        Skandhan (Guided by: Prof. Sameul GL)
+        <p>Developed a digital twin for a customized 3D printer in Unity for visual feedback of print.</p>
+      </div>
+    </div>
+
+
+    <div class="project">
+      <img src="tad.jpeg.jpg" alt="Project image">
+      <div class="project-content">
+        <span class="papertitle">Analysis of Granular systems using Photoelastic Grain Solver (PeGS)</span><br>
+        Skandhan K, Shins K (Guided by: Prof. Ramesh K)
+        <p>Simplification of evaluation of forces on soft photoelastic disks using efficient, closed-form stress field equations.</p>
+      </div>
+    </div>
+
+
+    <footer>
+      Thanks to <a href="https://jonbarron.info/">Jon Barron</a>.
+    </footer>
+
+  </div>
+</body>
+</html>
