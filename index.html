@@ -22,7 +22,6 @@
       padding: 20px;
     }
 
-
     .header {
       display: flex;
       flex-wrap: wrap;
@@ -40,7 +39,6 @@
       margin: 0;
     }
 
-    /* Section titles */
     h2, h1 {
       margin-top: 40px;
       margin-bottom: 15px;
@@ -73,14 +71,15 @@
       font-size: small;
       margin-top: 50px;
     }
+
     .profile-photo {
       display: block;
-      margin: 20px auto; 
-      max-width: 200px;  
+      margin: 20px auto;
+      max-width: 200px;
       border-radius: 50%;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);}
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
 
-   
     @media (max-width: 768px) {
       .header {
         flex-direction: column;
@@ -100,51 +99,52 @@
 <body>
   <div class="container">
 
-    
-     <section class="intro">
-    <div class="header">
-      <div>
-        <h1><b>Skandhan Karthikeyan</b></h1>
-        <p>
-          I'm an incoming Master's Student in Mechanical Engineering and Applied Mechanics with Specializtion in Robotics at the 
-          <a href="https://www.upenn.edu/">University of Pennsylvania</a>.
-        </p>
-        <p>
-          I earned my Bachelor's degree in Mechanical Engineering from the 
-          <a href="https://www.iitm.ac.in/">IIT Madras</a>. During my undergraduate studies, 
-          I interned at <a href="https://www.jswsteel.in/">JSW Steel</a> as a Manufacturing Intern, 
-          where I focused on optimizing industrial processes and ensuring adherence to safety regulations. 
-          I also pursued a research internship at the 
-          <a href="https://danielslab.physics.ncsu.edu/">Daniels Lab</a>, under 
-          <a href="https://danielslab.physics.ncsu.edu/people/karen-daniels/">Prof. Karen E. Daniels</a>, 
-          where I conducted particle-scale measurements of interparticle forces using photoelastic disks. 
-          In parallel, I was an active member of the 
-          <a href="https://cfi.iitm.ac.in/elec-club/">Electronics Club</a>, where I served as an Embedded Systems and Controls Engineer, 
-          later promoted as a team lead for 2023–2024.
-        </p>
-        <p>
-          <a href="Skandhan_Resume_Copy.pdf">Resume</a> &nbsp;/&nbsp;
-          <a href="https://www.linkedin.com/in/skandhan-karthikeyan-3a8683249/">LinkedIn</a> &nbsp;/&nbsp;
-          <a href="https://github.com/SKANDHAN-13">Github</a>
-        </p>
+    <section class="intro">
+      <div class="header">
+        <div>
+          <h1><b>Skandhan Karthikeyan</b></h1>
+          <p>
+            I am an M.S. student in Mechanical Engineering 
+            and Applied Mechanics (Mechatronics and Robotics Systems) at the 
+            <a href="https://www.upenn.edu/">University of Pennsylvania</a>.
+          </p>
+          <p>
+            I completed my B.Tech in Mechanical Engineering at 
+            <a href="https://www.iitm.ac.in/">IIT Madras</a>. During my undergraduate studies, I interned as an 
+            Embedded Systems Intern at <a href="https://www.jswsteel.in/">JSW Steel</a>, where I developed a 
+            microcontroller-based diagnostic unit for high-frequency deformation monitoring in the blooming mill. 
+            I also worked as a research intern in the 
+            <a href="https://danielslab.physics.ncsu.edu/">Daniels Lab</a> at North Carolina State University, 
+            focusing on interparticle force analysis in granular materials using photoelastic disks and the 
+            Photoelastic Grain Solver (PeGS). Following my hobby, I was part of the 
+            <a href="https://cfi.iitm.ac.in/elec-club/">Electronics Club</a> at IIT Madras, where I served as a 
+            Controls Engineer and later as a team lead (2023–2024).
+          </p>
+          <p>
+            <a href="SKANDYY_RESUME.pdf">Resume</a> &nbsp;/&nbsp;
+            <a href="https://www.linkedin.com/in/skandhan-karthikeyan-3a8683249/">LinkedIn</a> &nbsp;/&nbsp;
+            <a href="https://github.com/SKANDHAN-13">Github</a>
+          </p>
+        </div>
+        <img src="main_page.jpeg.jpg" alt="profile photo" class="profile-photo">
       </div>
-      <img src="main_page.jpeg.jpg" alt="profile photo" class="profile-photo">
-    </div>
     </section>
 
-   
-    <h2><b>Research Interests</b></h2>
-    <p>I am interested in applying physics, controls, and machine learning to develop algorithms to control robots.</p>
+    <h2><b>What Drives Me: </b></h2>
+    <p>
+      I am an embedded systems and controls engineer interested in developing firmware and real-time software for autonomous and robotic systems. My work spans mechatronic design, system integration, and feedback control, with a growing interest in applying physics, controls, and machine learning to robotics.
+    </p>
 
-    
-    <h1><b>Projects</b></h1>
+    <h1><b> Systems I've shaped :</b></h1>
 
     <div class="project">
       <img src="firstpic.jpg" alt="Project image">
       <div class="project-content">
         <span class="papertitle">LiDAR and Camera-based Navigation Algorithms for Lane-keeping in Unstructured roads</span>
-        <p>Classical Machine learning based system as a lightweight benchmark for future autonomous driving applications.</p>
-        <p><a href="https://docs.google.com/presentation/d/1FxscGQEdtuxn0fhOMtwFjj_2PRtn9-Fi/edit?slide=id.p1#slide=id.p1">[Poster]</a></p>
+        Skandhan K (Guided by: Dr. Anuj Tiwari)
+        <p>
+          Classical machine learning based system as a lightweight benchmark for future autonomous driving applications.
+        </p>
       </div>
     </div>
 
@@ -153,34 +153,55 @@
       <div class="project-content">
         <span class="papertitle">Delay compensation in networked robotic systems</span><br>
         Skandhan K, Shivendra Verma (Guided by: Dr. Anuj Tiwari)
-        <p>Formulated an observer-based feedback control algorithm to compensate for network delays in mobile, ground robots.</p>
+        <p>
+          Formulated an observer-based feedback control algorithm to compensate for network delays in mobile, ground robots.
+        </p>
       </div>
     </div>
-
-    <div class="project">
-      <video autoplay muted loop playsinline controls>
-        <source src="https://drive.google.com/uc?export=download&id=1RjbRGT3f61-P5YHyZEA23d159E_VxiJB" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <div class="project-content">
-        <span class="papertitle">Autonomous factory: Additive manufacturing</span><br>
-        Skandhan (Guided by: Prof. Sameul GL)
-        <p>Developed a digital twin for a customized 3D printer in Unity for visual feedback of print.</p>
-      </div>
-    </div>
-
 
     <div class="project">
       <img src="TAD.jpg" alt="Project image">
       <div class="project-content">
-        <span class="papertitle">Analysis of Granular systems using Photoelastic Grain Solver (PeGS)</span><br>
+        <span class="papertitle">Photoelastic Grain Solver (PeGS) 2.0</span><br>
         Skandhan K, Shins K (Guided by: Prof. Ramesh K)
-        <p>Simplification of evaluation of forces on soft photoelastic disks using efficient, closed-form stress field equations.</p>
+        <p>
+          Simplification of evaluation of forces on soft photoelastic disks using efficient, closed-form stress field equations.
+        </p>
       </div>
     </div>
 
+    <h2><b>Lab-side Leadership : </b></h2>
+    <p>
+      <b>Course Assistant, TinyML (ESE 3600)</b>, University of Pennsylvania (Aug 2025 – Nov 2025).<br>
+      Helped transition lab workflows from the Arduino IDE to PlatformIO (Espressif IDF) 
+      and adapted codebases for the Seeed Studio XIAO ESP32S3 Sense. Reimplemented and tuned 
+      embedded inference pipelines for latency-sensitive TinyML assignments.
+    </p>
 
-    <footer>
+    <h2><b>Tools I Wield : </b></h2>
+    <p><b>Software:</b><br>
+MATLAB &nbsp;|&nbsp; Python &nbsp;|&nbsp; C/C++ &nbsp;|&nbsp; PyTorch &nbsp;|&nbsp; Simulink &nbsp;|&nbsp; SQL &nbsp;|&nbsp; Unity &nbsp;|&nbsp; ROS2 &nbsp;|&nbsp; Git &nbsp;|&nbsp; Linux &nbsp;|&nbsp; HTML
+</p>
+
+
+<p><b>Hardware:</b><br>
+FreeRTOS &nbsp;|&nbsp; PCB Design (EasyEDA) &nbsp;|&nbsp; I<sup>2</sup>C &nbsp;|&nbsp; SPI &nbsp;|&nbsp; Bluetooth &nbsp;|&nbsp; Microcontrollers (ESP32 & Arduino -class boards)
+</p>
+
+
+<p><b>Others:</b><br>
+Fusion 360 &nbsp;|&nbsp; AutoCAD &nbsp;|&nbsp; Debugging and profiling for embedded systems
+</p>
+
+    <h2><b>Moments That Mattered: </b></h2>
+<ul>
+      <li>Ranked in the top 15% of the 2021 - 2025 Batch</li>
+      <li>Selected as a UNAI Millennium Fellow of the Class of 2024</li>
+      <li>Best Presentation, Young Investigator Workshop, International Soft Matter Conference - 2024</li>
+      <li>All India Rank 2401(Top 1.69%) in JEE Advanced - 2021; All India Rank 2242(Top 0.24%) in JEE Main – 2021.</li>
+</ul>
+
+<footer>
       Thanks to <a href="https://jonbarron.info/">Jon Barron</a>.
     </footer>
 
