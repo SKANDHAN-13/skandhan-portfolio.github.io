@@ -208,7 +208,7 @@
           </p>
           <p>
             I build systems that sit at the junction of <b>real-time embedded software</b>,
-            <b>control theory</b>, and <b>applied ML</b> — from diagnostic firmware on the
+            <b>control theory</b>, and <b>applied ML</b>, from diagnostic firmware on the
             factory floor to observer-based controllers for networked robots.
             B.Tech in Mechanical Engineering from
             <a href="https://www.iitm.ac.in/">IIT Madras</a>, where I also led the
@@ -229,9 +229,8 @@
     <h2>What Drives Me</h2>
     <p>
       I am a systems engineer who believes that the gap between a working prototype and a
-      deployable system is where the real engineering happens. My focus is on closing that
-      gap — designing control architectures and embedded pipelines that are not just
-      theoretically sound but robust in the field. I gravitate toward problems where
+      physics-based deployable system is where the real engineering happens. My focus is on closing that
+      gap, designing control architectures and embedded pipelines that are robust in the field. I look for problems where
       <b>hardware constraints, real-time requirements, and algorithmic complexity</b> all
       collide.
     </p>
@@ -248,16 +247,15 @@
         <div class="process-block">
           <p>
             <span class="label label-what">What</span>
-            Autonomous vehicles struggle on unmarked rural roads where GPS is unreliable and
-            lane markings don't exist — existing benchmarks were compute-heavy and hard to
-            replicate.
+            Autonomous vehicles struggle on roads of IITM, where animals make the scene unreliable and
+            lane markings are unclear. Existing benchmarks were compute-heavy and not the best for real-time decision making for a on-campus shuttle.
           </p>
           <p>
             <span class="label label-how">How</span>
-            Designed a classical ML pipeline fusing LiDAR point clouds with monocular camera
+            Designed a classical ML pipeline combining information from LiDAR point clouds with monocular camera
             frames. Built the perception stack from scratch: ground-plane segmentation,
-            obstacle clustering, and a rule-based lateral controller — deliberately keeping
-            the stack lightweight for future edge deployment.
+            obstacle clustering, and a rule-based lateral controller, while deliberately keeping
+            the stack simple, yet efficient for future edge deployment.
           </p>
           <p>
             <span class="label label-result">Result</span>
@@ -278,19 +276,18 @@
         <div class="process-block">
           <p>
             <span class="label label-what">What</span>
-            Variable network latency causes instability and poor tracking in teleoperated
-            ground robots — a known open problem with no single-size solution.
+            Variable network latency causes instability and poor tracking in graphed robot networks
+            , a long-standing, open problem in decentralized control of networked robots.
           </p>
           <p>
             <span class="label label-how">How</span>
             Formulated a state-observer that estimates the delayed system state in real time,
             then feeds a predictive feedback signal to the controller. Modelled network delay
-            as a bounded perturbation and proved stability margins analytically before
-            validating on a simulated ground robot.
+            as a bounded perturbation and validated on a simulated ground robot.
           </p>
           <p>
             <span class="label label-result">Result</span>
-            Observer-based compensation reduced tracking error under 200 ms simulated delay
+            Observer-based compensation reduced cohesion loss (formation error while in transition) under 200 ms simulated delay
             significantly compared to an uncompensated baseline, demonstrating robustness
             across variable delay profiles.
           </p>
@@ -307,22 +304,19 @@
         <div class="process-block">
           <p>
             <span class="label label-what">What</span>
-            Existing PeGS implementations became computationally prohibitive for larger
-            granular particles, where the fringe patterns grow complex and iterative numerical
-            solvers stall.
+            Existing PeGS implementations was computationally restrictive for larger
+            granular particles, where the fringe patterns grow complex and the existing methods proved to stall.
           </p>
           <p>
             <span class="label label-how">How</span>
             Derived closed-form stress-field equations for soft photoelastic disks that
-            replace expensive numerical integration. Validated the analytical solution against
-            finite-element references and integrated it into the PeGS codebase.
+            replace existing method to formulate. Validated a scaling trick to match the experimental solution and integrated it into Mr. Shins PhD thesis.
           </p>
           <p>
             <span class="label label-result">Result</span>
             Achieved a significant reduction in solve time for large-particle configurations,
-            enabling the lab to run larger ensemble experiments and presented findings at the
-            International Soft Matter Conference 2024 (Best Presentation, Young Investigator
-            Workshop).
+            enabling the lab to run larger ensemble experiments. Put my skills and findings from the Young Investigator
+            Workshop, to work ;).
           </p>
         </div>
       </div>
@@ -331,16 +325,14 @@
     <!-- ═══════════════ TEACHING ═══════════════ -->
     <h2>Lab-side Leadership</h2>
     <div class="teaching-card">
-      <h3>Course Assistant — TinyML (ESE 3600), University of Pennsylvania &nbsp;<span style="font-weight:400;color:#666;">(Aug 2025 – Nov 2025)</span></h3>
+      <h3>Course Assistant - TinyML (ESE 3600), University of Pennsylvania &nbsp;<span style="font-weight:400;color:#666;">(Aug 2025 – Nov 2025)</span></h3>
       <p>
         <b>Challenge:</b> The course was migrating its embedded lab infrastructure mid-semester,
         with students needing to port Arduino-IDE workflows to PlatformIO (Espressif IDF) on
         the Seeed Studio XIAO ESP32S3 Sense.<br>
-        <b>Action:</b> Rewrote and tested all lab starter codebases for the new toolchain,
-        reimplemented embedded inference pipelines, and created reference documentation that
-        cut student setup time substantially.<br>
-        <b>Outcome:</b> Labs ran on schedule with zero toolchain-related session cancellations;
-        the new codebases became the canonical starting point for future cohorts.
+        <b>Action:</b> Rewrote and tested all lab project codebases, spanning Magic Wand, Wake-word detection, etc. for the new toolchain,
+        reimplemented embedded inference pipelines, and created reference documentation.<br>
+        <b>Outcome:</b> The new codebases became the starting point for future cohorts.
       </p>
     </div>
 
@@ -387,11 +379,11 @@
     <!-- ═══════════════ ACHIEVEMENTS ═══════════════ -->
     <h2>Moments That Mattered</h2>
     <ul class="achievements-list">
-      <li>🏆 <b>Best Presentation</b>, Young Investigator Workshop — International Soft Matter Conference 2024</li>
-      <li>🚀 ThinkCAD team accepted into the <b>Wharton Generative AI Studio</b></li>
-      <li>🌐 Selected as a <b>UNAI Millennium Fellow</b>, Class of 2024</li>
-      <li>📊 Ranked in the <b>top 15%</b> of the 2021–2025 batch at IIT Madras</li>
-      <li>📝 <b>AIR 2401 (top 1.69%)</b> in JEE Advanced 2021 &nbsp;·&nbsp; <b>AIR 2242 (top 0.24%)</b> in JEE Main 2021</li>
+      <li>ThinkCAD team accepted into the <b>Wharton Generative AI Studio</b></li>
+      <li><b>Best Presentation</b>, Young Investigator Workshop — International Soft Matter Conference 2024</li>
+      <li>Selected as a <b>UNAI Millennium Fellow</b>, Class of 2024</li>
+      <li>Ranked in the <b>top 15%</b> of the 2021–2025 batch at IIT Madras</li>
+      <li> <b>AIR 2401 (top 1.69%)</b> in JEE Advanced 2021 &nbsp;·&nbsp; <b>AIR 2242 (top 0.24%)</b> in JEE Main 2021</li>
     </ul>
 
     <footer>
