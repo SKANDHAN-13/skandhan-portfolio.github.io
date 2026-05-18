@@ -276,20 +276,19 @@
         <div class="process-block">
           <p>
             <span class="label label-what">What</span>
-            Variable network latency causes instability and poor tracking in graphed robot networks
-            , a long-standing, open problem in decentralized control of networked robots.
+            Variable network latency causes instability in graphed robot networks moving with Delayed Self Reinforcement (DSR)
+            , a long-standing problem in decentralized, formation control.
           </p>
           <p>
             <span class="label label-how">How</span>
-            Formulated a state-observer that estimates the delayed system state in real time,
-            then feeds a predictive feedback signal to the controller. Modelled network delay
+            Formulated a disturbance term and an observer that estimates the delay in the system in real time,
+            then feeds a corrective feedback signal to the controller. Modeled network delay
             as a bounded perturbation and validated on a simulated ground robot.
           </p>
           <p>
             <span class="label label-result">Result</span>
-            Observer-based compensation reduced cohesion loss (formation error while in transition) under 200 ms simulated delay
-            significantly compared to an uncompensated baseline, demonstrating robustness
-            across variable delay profiles.
+            Communication Observer-based compensation reduced cohesion loss by 33%, while in transition, and 
+            demonstrated robustness across variable delay profiles.
           </p>
         </div>
       </div>
