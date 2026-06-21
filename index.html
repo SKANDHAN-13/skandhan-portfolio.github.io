@@ -7,43 +7,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="images/favicon/iron.jpg" type="image/x-icon">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
-
-    :root {
-      --bg: #f4f8ff;
-      --card: #ffffff;
-      --ink: #1f2937;
-      --muted: #5f6b7a;
-      --primary: #2563eb;
-      --primary-soft: #dbeafe;
-      --accent: #7c3aed;
-      --accent-soft: #ede9fe;
-      --success: #15803d;
-      --success-soft: #dcfce7;
-      --warn: #b45309;
-      --warn-soft: #ffedd5;
-      --shadow: 0 8px 24px rgba(31, 41, 55, 0.12);
-    }
-
-    * { box-sizing: border-box; }
+    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 
     body {
       font-family: 'Lato', 'Times New Roman', Arial, sans-serif;
       margin: 0;
       padding: 0;
-      line-height: 1.75;
-      color: var(--ink);
-      background:
-        radial-gradient(circle at 10% 20%, #e0e7ff 0%, transparent 30%),
-        radial-gradient(circle at 90% 10%, #ffe4e6 0%, transparent 28%),
-        radial-gradient(circle at 20% 80%, #dcfce7 0%, transparent 26%),
-        var(--bg);
+      line-height: 1.6;
+      color: #333;
+      background: #fafafa;
     }
 
     .container {
-      max-width: 1050px;
+      max-width: 1000px;
       margin: auto;
-      padding: 36px 20px 44px;
+      padding: 30px 20px;
     }
 
     .header {
@@ -52,49 +30,39 @@
       align-items: center;
       justify-content: space-between;
       gap: 30px;
-      background: linear-gradient(135deg, #ffffff 0%, #f8fbff 100%);
-      border-radius: 16px;
-      padding: 32px;
-      box-shadow: var(--shadow);
-      border: 1px solid #e5ecff;
+      background: #fff;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
     }
-
     .header-text { flex: 1; min-width: 260px; }
-    .header-text h1 {
-      margin: 0 0 14px;
-      font-size: 2em;
-      line-height: 1.25;
-      color: #0f172a;
-    }
-    .header-text p { margin: 0 0 12px; }
+    .header-text h1 { margin: 0 0 12px; font-size: 2em; }
+    .header-text p  { margin: 0 0 10px; }
 
     .profile-photo {
       display: block;
-      width: 190px;
-      height: 190px;
+      width: 180px;
+      height: 180px;
       object-fit: cover;
-      border-radius: 12px;
-      border: 4px solid #e0e7ff;
-      box-shadow: 0 8px 22px rgba(37, 99, 235, 0.2);
+      border-radius: 0%;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       flex-shrink: 0;
     }
 
-    a {
-      color: var(--primary);
+    .links a {
+      color: #0066cc;
       text-decoration: none;
-      font-weight: 700;
+      font-weight: 600;
     }
-    a:hover { text-decoration: underline; }
-
-    .links a { margin-right: 3px; }
+    .links a:hover { text-decoration: underline; }
 
     h2 {
-      margin-top: 54px;
-      margin-bottom: 12px;
-      font-size: 1.45em;
-      border-bottom: 3px solid #dbe7ff;
-      padding-bottom: 8px;
-      color: #0f172a;
+      margin-top: 48px;
+      margin-bottom: 6px;
+      font-size: 1.4em;
+      border-bottom: 2px solid #e0e0e0;
+      padding-bottom: 6px;
+      color: #111;
     }
 
     .project {
@@ -102,93 +70,64 @@
       flex-wrap: wrap;
       gap: 24px;
       margin: 24px 0 36px;
-      background: var(--card);
-      border-radius: 14px;
+      background: #fff;
+      border-radius: 12px;
       padding: 24px;
-      box-shadow: var(--shadow);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
       align-items: flex-start;
-      border: 1px solid #e9efff;
     }
-
     .project img, .project video {
       width: 100%;
       max-width: 260px;
-      border-radius: 10px;
+      border-radius: 8px;
       display: block;
       object-fit: cover;
       flex-shrink: 0;
-      border: 1px solid #e2e8f0;
-      background: #f8fafc;
     }
-
     .project-content { flex: 1; min-width: 240px; }
 
     .papertitle {
-      font-weight: 900;
+      font-weight: 700;
       font-size: 1.08em;
-      color: #111827;
+      color: #111;
       display: block;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
-
     .project-meta {
-      font-size: 0.9em;
-      color: var(--muted);
+      font-size: 0.88em;
+      color: #666;
       margin-bottom: 12px;
     }
 
     .process-block { margin-top: 10px; }
-    .process-block p { margin: 10px 0; }
-
+    .process-block p { margin: 6px 0; }
     .label {
       display: inline-block;
-      font-weight: 900;
-      font-size: 0.74em;
+      font-weight: 700;
+      font-size: 0.78em;
       text-transform: uppercase;
       letter-spacing: 0.06em;
-      padding: 3px 8px;
-      border-radius: 5px;
+      padding: 2px 7px;
+      border-radius: 4px;
       margin-right: 6px;
       vertical-align: middle;
     }
+    .label-what   { background: #e8f0fe; color: #1a6cc; }
+    .label-how    { background: #e6f4ea; color: #1a7a3c; }
+    .label-result { background: #fff3e0; color: #b8c00; }
 
-    .label-what   { background: var(--primary-soft); color: #1e40af; }
-    .label-how    { background: var(--success-soft); color: var(--success); }
-    .label-result { background: var(--warn-soft); color: var(--warn); }
-
-    .teaching-card,
-    .drive-card {
-      background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
-      border-radius: 12px;
-      padding: 22px 24px;
-      box-shadow: var(--shadow);
-      margin-top: 16px;
-      border: 1px solid #e7efff;
-    }
-
-    .teaching-card h3,
-    .drive-card h3 {
-      margin: 0 0 10px;
-      font-size: 1.03em;
-      color: #0f172a;
-    }
-
-    .teaching-card p,
-    .drive-card p { margin: 0; font-size: 0.96em; }
-
-    .drive-list {
-      margin: 0;
-      padding-left: 20px;
+    .media-grid {
+      margin-top: 10px;
       display: grid;
-      gap: 14px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 12px;
     }
-
-    .drive-list li {
-      background: #ffffff;
-      border: 1px solid #e6edff;
-      border-left: 4px solid var(--accent);
-      border-radius: 8px;
-      padding: 10px 12px;
+    .media-grid video, .media-grid img {
+      width: 100%;
+      max-width: 100%;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      background: #f8fafc;
     }
 
     .skills-grid {
@@ -197,15 +136,12 @@
       gap: 16px;
       margin-top: 16px;
     }
-
     .skill-card {
-      background: var(--card);
+      background: #fff;
       border-radius: 10px;
       padding: 16px 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      border: 1px solid #e9efff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
     }
-
     .skill-card h3 {
       margin: 0 0 10px;
       font-size: 0.9em;
@@ -213,17 +149,13 @@
       letter-spacing: 0.08em;
       color: #334155;
     }
-
     .skill-tags { display: flex; flex-wrap: wrap; gap: 8px; }
-
     .tag {
-      background: #eef2ff;
-      border: 1px solid #dbe4ff;
+      background: #f0f0f0;
       border-radius: 20px;
       padding: 3px 12px;
-      font-size: 0.82em;
-      color: #1f2937;
-      font-weight: 700;
+      font-size: 0.8em;
+      color: #333;
     }
 
     .achievements-list {
@@ -231,22 +163,31 @@
       padding: 0;
       margin: 16px 0 0;
     }
-
     .achievements-list li {
       background: #fff;
-      border-left: 4px solid var(--primary);
-      border-radius: 0 10px 10px 0;
+      border-left: 4px solid #0066cc;
+      border-radius: 0 8px 8px 0;
       padding: 10px 16px;
       margin-bottom: 10px;
-      box-shadow: 0 2px 7px rgba(0,0,0,0.07);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.0);
       font-size: 0.97em;
     }
 
+    .teaching-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px 24px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+      margin-top: 16px;
+    }
+    .teaching-card h3 { margin: 0 0 8px; font-size: 1em; }
+    .teaching-card p  { margin: 0; font-size: 0.96em; }
+
     footer {
       text-align: right;
-      font-size: 0.86em;
-      margin-top: 64px;
-      color: #64748b;
+      font-size: small;
+      margin-top: 60px;
+      color: #888;
     }
 
     @media (max-width: 768px) {
@@ -297,58 +238,71 @@
       collide.
     </p>
 
-    <h2>Systems I've Shaped</h2>
+    <h2>Experience</h2>
 
     <div class="project">
-      <img src="firstpic.jpg" alt="LiDAR lane-keeping project">
+      <img src="VersaGrip_V1_V2.png" alt="VersaGrip V1 and V2">
       <div class="project-content">
-        <span class="papertitle">LiDAR &amp; Camera-based Lane-Keeping in Semi-structured Roads</span>
-        <div class="project-meta">Skandhan K &nbsp;·&nbsp; Guided by Dr. Anuj Tiwari</div>
+        <span class="papertitle">VersaGrip &amp; Embedded Systems Work</span>
+        <div class="project-meta">Electronics Club IIT Madras &nbsp;·&nbsp; Embedded Systems Intern at JSW Steel</div>
         <div class="process-block">
-          <p>
-            <span class="label label-what">What</span>
-            Autonomous vehicles struggle on roads of IITM, where animals make the scene unreliable and
-            lane markings are unclear. Existing benchmarks were compute-heavy and not the best for real-time decision making for an on-campus shuttle.
+          <p><span class="label label-what">What</span>
+            Built an electro-mechanical glove adaptation (VersaGrip) with 6 hobbyists to assist paraplegic users with day-to-day fine-motor tasks.
           </p>
-          <p>
-            <span class="label label-how">How</span>
-            Designed a classical ML pipeline combining information from LiDAR point clouds with monocular camera
-            frames. Built the perception stack from scratch: ground-plane segmentation,
-            obstacle clustering, and a rule-based lateral controller, while deliberately keeping
-            the stack simple, yet efficient for future edge deployment.
+          <p><span class="label label-how">How</span>
+            Developed the ESP32-C3 based PCB and multi-motor control system; also implemented deformation detection workflows at JSW Steel using signal preprocessing and rule-based methods.
           </p>
-          <p>
-            <span class="label label-result">Result</span>
-            Delivered a reproducible, low-compute benchmark that future deep-learning
-            approaches in the lab can be compared against; documented the full
-            workflow as a starting point for autonomous driving research.
+          <p><span class="label label-result">Result</span>
+            Delivered an assistive embedded prototype and practical industrial diagnostics experience.
           </p>
         </div>
       </div>
     </div>
 
     <div class="project">
-      <img src="ir.png" alt="Networked robotics delay compensation">
+      <div class="project-content">
+        <span class="papertitle">Addressing Actuator Delays in Networked Robotic Systems</span>
+        <div class="project-meta">Skandhan K &nbsp;·&nbsp; Guided by Dr. Anuj Tiwari</div>
+        <div class="process-block">
+          <p><span class="label label-what">What</span>
+            Investigated actuator and network delays in decentralized robotic systems during junior-year fall.
+          </p>
+          <p><span class="label label-how">How</span>
+            Developed simulation frameworks and analysis scripts in MATLAB/Simulink to model and evaluate delay effects.
+          </p>
+          <p><span class="label label-result">Result</span>
+            Established baseline delay behavior and built the foundation for observer-based compensation work.
+          </p>
+        </div>
+        <div class="media-grid">
+          <video controls preload="metadata">
+            <source src="Delayed.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <div class="project">
       <div class="project-content">
         <span class="papertitle">Delay Compensation in Networked Robotic Systems</span>
         <div class="project-meta">Skandhan K, Shivendra Verma &nbsp;·&nbsp; Guided by Dr. Anuj Tiwari</div>
         <div class="process-block">
-          <p>
-            <span class="label label-what">What</span>
-            Variable network latency causes instability in graphed robot networks moving with Delayed Self Reinforcement (DSR),
-            a long-standing problem in decentralized formation control.
+          <p><span class="label label-what">What</span>
+            Extended delay analysis to robust compensation in networked robotic systems.
           </p>
-          <p>
-            <span class="label label-how">How</span>
-            Formulated a disturbance term and an observer that estimates the delay in the system in real time,
-            then feeds a corrective feedback signal to the controller. Modeled network delay
-            as a bounded perturbation and validated on a simulated ground robot.
+          <p><span class="label label-how">How</span>
+            Formulated observer-based compensation and corrective feedback strategies; validated across variable-delay profiles.
           </p>
-          <p>
-            <span class="label label-result">Result</span>
-            Communication Observer-based compensation reduced cohesion loss by 33% while in transition and
-            demonstrated robustness across variable delay profiles.
+          <p><span class="label label-result">Result</span>
+            Improved system cohesion and transition robustness under communication delays.
           </p>
+        </div>
+        <div class="media-grid">
+          <video controls preload="metadata">
+            <source src="Compensated.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
         </div>
       </div>
     </div>
@@ -359,68 +313,60 @@
         <span class="papertitle">Photoelastic Grain Solver (PeGS) for Larger Particles</span>
         <div class="project-meta">Skandhan K, Shins K &nbsp;·&nbsp; Guided by Prof. Ramesh K &nbsp;·&nbsp; <a href="https://danielslab.physics.ncsu.edu/">Daniels Lab, NC State</a></div>
         <div class="process-block">
-          <p>
-            <span class="label label-what">What</span>
-            Existing PeGS implementations were computationally restrictive for larger
-            granular particles, where fringe patterns grow complex and existing methods stalled.
+          <p><span class="label label-what">What</span>
+            Existing PeGS implementations were computationally restrictive for larger granular particles.
           </p>
-          <p>
-            <span class="label label-how">How</span>
-            Derived closed-form stress-field equations for soft photoelastic disks that
-            replace existing method formulations. Validated a scaling trick to match experimental solutions and integrated it into Mr. Shins' PhD thesis.
+          <p><span class="label label-how">How</span>
+            Simplified equations in PeGS formulation and explored invasive friction-coefficient evaluation for Vishay PhotoStress particles, with MATLAB-based visualizations and scripts.
           </p>
-          <p>
-            <span class="label label-result">Result</span>
-            Achieved a significant reduction in solve time for large-particle configurations,
-            enabling the lab to run larger ensemble experiments.
+          <p><span class="label label-result">Result</span>
+            Reduced solve complexity for larger configurations. <a href="yiw-poster.pdf" target="_blank" rel="noopener">View presentation</a>.
           </p>
         </div>
       </div>
     </div>
 
-    <h2>Additional Experience Materials</h2>
-    <div class="drive-card">
-      <h3>Google Drive Portfolio Material</h3>
-      <p style="margin-bottom: 14px;">
-        The following materials highlight my past experience:
-        <a href="https://drive.google.com/drive/u/0/folders/1VWB2vyPweWNEGYXx8zvIrXoTDNS_9ZBN" target="_blank" rel="noopener">Open Drive Folder</a>
-      </p>
-      <ul class="drive-list">
-        <li>
-          As an embedded system hobbyist, I worked with 6 other hobbyists in the Electronics Club to develop Versagrip.
-          It was an electro-mechanical adaptation on a glove, to assist paraplegic users with day-to-day fine-motor tasks.
-          I contributed to the development of the ESP32-C3 based PCB and multi-motor control system for the mechanism to operate as intended.
-          (Image in the drive: <b>VersaGrip_V1_V2.png</b>)
-          Also, I interned as an embedded systems intern at JSW Steel, implementing deformation detection using signal preprocessing and rule-based systems.
-        </li>
-        <li>
-          During my junior year in undergrad (Fall semester), I worked with Dr. Anuj Tiwari on a research project titled
-          "Addressing Actuator Delays in Networked Robotic Systems." I developed simulation frameworks and analysis scripts in MATLAB/Simulink
-          to model and evaluate delay effects. In the following semester, I extended this work to
-          "Delay Compensation in Networked Robotic Systems," focusing on observer-based compensation methods
-          (videos attached in the drive: <b>Delayed.mp4</b> &amp; <b>Compensated.mp4</b> implementation).
-        </li>
-        <li>
-          During my research internship at Daniels Lab, I worked on simplifying equations used in the formulation of PeGS,
-          and a method to invasively evaluate the coefficient of friction between soft granular Vishay PhotoStress particles.
-          Visualizations and scripts were developed in MATLAB
-          (presentation in the drive: <b>yiw-poster.pdf</b>).
-        </li>
-        <li>
-          For my B.Tech project, I designed and evaluated a lightweight multi-sensor perception pipeline for a safety-critical autonomous system.
-          The system was implemented in Python using the CARLA simulator, with a focus on robustness and real-time feasibility
-          (presentation in the drive: <b>BTP-ME21B194.pdf</b>).
-        </li>
-        <li>
-          Over the past semester, I worked with Prof. Rahul Mangharam developing simulations based on Non-linear MPC
-          for a long-term initiative of utilizing Learning-to-Optimize framework for Linear Predictive Control in autonomous racing.
-        </li>
-      </ul>
+    <div class="project">
+      <img src="firstpic.jpg" alt="CARLA-based autonomous perception project">
+      <div class="project-content">
+        <span class="papertitle">B.Tech Project: Lightweight Multi-sensor Perception Pipeline</span>
+        <div class="project-meta">IIT Madras &nbsp;·&nbsp; Safety-Critical Autonomous Systems</div>
+        <div class="process-block">
+          <p><span class="label label-what">What</span>
+            Designed and evaluated a lightweight multi-sensor perception pipeline for a safety-critical autonomous system.
+          </p>
+          <p><span class="label label-how">How</span>
+            Implemented in Python using CARLA, emphasizing robustness and real-time feasibility.
+          </p>
+          <p><span class="label label-result">Result</span>
+            Built a reproducible simulation and evaluation stack. <a href="BTP-ME21B194.pdf" target="_blank" rel="noopener">View presentation</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="project">
+      <img src="ir.png" alt="Non-linear MPC simulation for autonomous racing">
+      <div class="project-content">
+        <span class="papertitle">Learning-to-Optimize for Linear Predictive Control in Autonomous Racing</span>
+        <div class="project-meta">With Prof. Rahul Mangharam</div>
+        <div class="process-block">
+          <p><span class="label label-what">What</span>
+            Long-term initiative toward Learning-to-Optimize methods for autonomous racing control.
+          </p>
+          <p><span class="label label-how">How</span>
+            Developed simulation workflows based on Non-linear MPC for Linear Predictive Control objectives.
+          </p>
+          <p><span class="label label-result">Result</span>
+            Produced simulation insights and groundwork for future controller refinement.
+          </p>
+        </div>
+      </div>
     </div>
 
     <h2>Lab-side Leadership</h2>
     <div class="teaching-card">
-      <h3>Course Assistant - TinyML (ESE 3600), University of Pennsylvania &nbsp;<span style="font-weight:400;color:#64748b;">(Aug 2025 – Nov 2025)</span></h3>
+      <h3>Course Assistant - TinyML (ESE 3600), University of Pennsylvania &nbsp;<span style="font-weight:400;color:#666;">(Aug 2025 – Nov 2025)</span></h3>
       <p>
         <b>Challenge:</b> The course was migrating its embedded lab infrastructure mid-semester,
         with students needing to port Arduino-IDE workflows to PlatformIO (Espressif IDF) on
