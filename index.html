@@ -7,184 +7,248 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="images/favicon/iron.jpg" type="image/x-icon">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+    :root {
+      --bg: #f4f8ff;
+      --card: #ffffff;
+      --ink: #1f2937;
+      --muted: #5f6b7a;
+      --primary: #2563eb;
+      --primary-soft: #dbeafe;
+      --accent: #7c3aed;
+      --accent-soft: #ede9fe;
+      --success: #15803d;
+      --success-soft: #dcfce7;
+      --warn: #b45309;
+      --warn-soft: #ffedd5;
+      --shadow: 0 8px 24px rgba(31, 41, 55, 0.12);
+    }
+
+    * { box-sizing: border-box; }
 
     body {
       font-family: 'Lato', 'Times New Roman', Arial, sans-serif;
       margin: 0;
       padding: 0;
-      line-height: 1.6;
-      color: #333;
-      background: #fafafa;
+      line-height: 1.75;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 10% 20%, #e0e7ff 0%, transparent 30%),
+        radial-gradient(circle at 90% 10%, #ffe4e6 0%, transparent 28%),
+        radial-gradient(circle at 20% 80%, #dcfce7 0%, transparent 26%),
+        var(--bg);
     }
 
     .container {
-      max-width: 1000px;
+      max-width: 1050px;
       margin: auto;
-      padding: 30px 20px;
+      padding: 36px 20px 44px;
     }
 
-    /* ── Header / Intro ── */
     .header {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
       gap: 30px;
-      background: #fff;
-      border-radius: 12px;
-      padding: 30px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      background: linear-gradient(135deg, #ffffff 0%, #f8fbff 100%);
+      border-radius: 16px;
+      padding: 32px;
+      box-shadow: var(--shadow);
+      border: 1px solid #e5ecff;
     }
+
     .header-text { flex: 1; min-width: 260px; }
-    .header-text h1 { margin: 0 0 12px; font-size: 2em; }
-    .header-text p  { margin: 0 0 10px; }
+    .header-text h1 {
+      margin: 0 0 14px;
+      font-size: 2em;
+      line-height: 1.25;
+      color: #0f172a;
+    }
+    .header-text p { margin: 0 0 12px; }
 
     .profile-photo {
       display: block;
-      width: 180px;
-      height: 180px;
+      width: 190px;
+      height: 190px;
       object-fit: cover;
-      border-radius: 0%;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      border: 4px solid #e0e7ff;
+      box-shadow: 0 8px 22px rgba(37, 99, 235, 0.2);
       flex-shrink: 0;
     }
 
-    .links a {
-      color: #0066cc;
+    a {
+      color: var(--primary);
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 700;
     }
-    .links a:hover { text-decoration: underline; }
+    a:hover { text-decoration: underline; }
 
-    /* ── Section headings ── */
+    .links a { margin-right: 3px; }
+
     h2 {
-      margin-top: 48px;
-      margin-bottom: 6px;
-      font-size: 1.4em;
-      border-bottom: 2px solid #e0e0e0;
-      padding-bottom: 6px;
-      color: #111;
+      margin-top: 54px;
+      margin-bottom: 12px;
+      font-size: 1.45em;
+      border-bottom: 3px solid #dbe7ff;
+      padding-bottom: 8px;
+      color: #0f172a;
     }
 
-    /* ── Project cards ── */
     .project {
       display: flex;
       flex-wrap: wrap;
       gap: 24px;
       margin: 24px 0 36px;
-      background: #fff;
-      border-radius: 12px;
+      background: var(--card);
+      border-radius: 14px;
       padding: 24px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      box-shadow: var(--shadow);
       align-items: flex-start;
+      border: 1px solid #e9efff;
     }
+
     .project img, .project video {
       width: 100%;
       max-width: 260px;
-      border-radius: 8px;
+      border-radius: 10px;
       display: block;
       object-fit: cover;
       flex-shrink: 0;
+      border: 1px solid #e2e8f0;
+      background: #f8fafc;
     }
+
     .project-content { flex: 1; min-width: 240px; }
 
     .papertitle {
-      font-weight: 700;
+      font-weight: 900;
       font-size: 1.08em;
-      color: #111;
+      color: #111827;
       display: block;
-      margin-bottom: 4px;
+      margin-bottom: 6px;
     }
+
     .project-meta {
-      font-size: 0.88em;
-      color: #666;
+      font-size: 0.9em;
+      color: var(--muted);
       margin-bottom: 12px;
     }
 
-    /* What / How / Result labels */
     .process-block { margin-top: 10px; }
-    .process-block p { margin: 6px 0; }
+    .process-block p { margin: 10px 0; }
+
     .label {
       display: inline-block;
-      font-weight: 700;
-      font-size: 0.78em;
+      font-weight: 900;
+      font-size: 0.74em;
       text-transform: uppercase;
       letter-spacing: 0.06em;
-      padding: 2px 7px;
-      border-radius: 4px;
+      padding: 3px 8px;
+      border-radius: 5px;
       margin-right: 6px;
       vertical-align: middle;
     }
-    .label-what   { background: #e8f0fe; color: #1a6cc; }
-    .label-how    { background: #e6f4ea; color: #1a7a3c; }
-    .label-result { background: #fff3e0; color: #b8c00; }
 
-    /* ── Skills grid ── */
+    .label-what   { background: var(--primary-soft); color: #1e40af; }
+    .label-how    { background: var(--success-soft); color: var(--success); }
+    .label-result { background: var(--warn-soft); color: var(--warn); }
+
+    .teaching-card,
+    .drive-card {
+      background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+      border-radius: 12px;
+      padding: 22px 24px;
+      box-shadow: var(--shadow);
+      margin-top: 16px;
+      border: 1px solid #e7efff;
+    }
+
+    .teaching-card h3,
+    .drive-card h3 {
+      margin: 0 0 10px;
+      font-size: 1.03em;
+      color: #0f172a;
+    }
+
+    .teaching-card p,
+    .drive-card p { margin: 0; font-size: 0.96em; }
+
+    .drive-list {
+      margin: 0;
+      padding-left: 20px;
+      display: grid;
+      gap: 14px;
+    }
+
+    .drive-list li {
+      background: #ffffff;
+      border: 1px solid #e6edff;
+      border-left: 4px solid var(--accent);
+      border-radius: 8px;
+      padding: 10px 12px;
+    }
+
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 16px;
       margin-top: 16px;
     }
+
     .skill-card {
-      background: #fff;
+      background: var(--card);
       border-radius: 10px;
       padding: 16px 20px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      border: 1px solid #e9efff;
     }
+
     .skill-card h3 {
       margin: 0 0 10px;
       font-size: 0.9em;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      color: #;
-    }
-    .skill-tags { display: flex; flex-wrap: wrap; gap: 8px; }
-    .tag {
-      background: #f0f0f0;
-      border-radius: 20px;
-      padding: 3px 12px;
-      font-size: 0.8em;
-      color: #333;
+      color: #334155;
     }
 
-    /* ── Achievements ── */
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+
+    .tag {
+      background: #eef2ff;
+      border: 1px solid #dbe4ff;
+      border-radius: 20px;
+      padding: 3px 12px;
+      font-size: 0.82em;
+      color: #1f2937;
+      font-weight: 700;
+    }
+
     .achievements-list {
       list-style: none;
       padding: 0;
       margin: 16px 0 0;
     }
+
     .achievements-list li {
       background: #fff;
-      border-left: 4px solid #0066cc;
-      border-radius: 0 8px 8px 0;
+      border-left: 4px solid var(--primary);
+      border-radius: 0 10px 10px 0;
       padding: 10px 16px;
       margin-bottom: 10px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.0);
+      box-shadow: 0 2px 7px rgba(0,0,0,0.07);
       font-size: 0.97em;
     }
 
-    /* ── Teaching ── */
-    .teaching-card {
-      background: #fff;
-      border-radius: 10px;
-      padding: 20px 24px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-      margin-top: 16px;
-    }
-    .teaching-card h3 { margin: 0 0 8px; font-size: 1em; }
-    .teaching-card p  { margin: 0; font-size: 0.96em; }
-
-    /* ── Footer ── */
     footer {
       text-align: right;
-      font-size: small;
-      margin-top: 60px;
-      color: #888;
+      font-size: 0.86em;
+      margin-top: 64px;
+      color: #64748b;
     }
 
-    /* ── Responsive ── */
     @media (max-width: 768px) {
       .header { flex-direction: column; text-align: center; }
       .profile-photo { margin: 0 auto; }
@@ -196,7 +260,6 @@
 <body>
   <div class="container">
 
-    <!-- ═══════════════ INTRO ═══════════════ -->
     <section class="intro">
       <div class="header">
         <div class="header-text">
@@ -225,7 +288,6 @@
       </div>
     </section>
 
-    <!-- ═══════════════ MISSION ═══════════════ -->
     <h2>What Drives Me</h2>
     <p>
       I am a systems engineer who believes that the gap between a working prototype and a
@@ -235,10 +297,8 @@
       collide.
     </p>
 
-    <!-- ═══════════════ PROJECTS ═══════════════ -->
     <h2>Systems I've Shaped</h2>
 
-    <!-- Project 1 -->
     <div class="project">
       <img src="firstpic.jpg" alt="LiDAR lane-keeping project">
       <div class="project-content">
@@ -248,7 +308,7 @@
           <p>
             <span class="label label-what">What</span>
             Autonomous vehicles struggle on roads of IITM, where animals make the scene unreliable and
-            lane markings are unclear. Existing benchmarks were compute-heavy and not the best for real-time decision making for a on-campus shuttle.
+            lane markings are unclear. Existing benchmarks were compute-heavy and not the best for real-time decision making for an on-campus shuttle.
           </p>
           <p>
             <span class="label label-how">How</span>
@@ -267,7 +327,6 @@
       </div>
     </div>
 
-    <!-- Project 2 -->
     <div class="project">
       <img src="ir.png" alt="Networked robotics delay compensation">
       <div class="project-content">
@@ -276,8 +335,8 @@
         <div class="process-block">
           <p>
             <span class="label label-what">What</span>
-            Variable network latency causes instability in graphed robot networks moving with Delayed Self Reinforcement (DSR)
-            , a long-standing problem in decentralized, formation control.
+            Variable network latency causes instability in graphed robot networks moving with Delayed Self Reinforcement (DSR),
+            a long-standing problem in decentralized formation control.
           </p>
           <p>
             <span class="label label-how">How</span>
@@ -287,14 +346,13 @@
           </p>
           <p>
             <span class="label label-result">Result</span>
-            Communication Observer-based compensation reduced cohesion loss by 33%, while in transition, and 
+            Communication Observer-based compensation reduced cohesion loss by 33% while in transition and
             demonstrated robustness across variable delay profiles.
           </p>
         </div>
       </div>
     </div>
 
-    <!-- Project 3 -->
     <div class="project">
       <img src="TAD.jpg" alt="PeGS photoelastic solver">
       <div class="project-content">
@@ -303,28 +361,66 @@
         <div class="process-block">
           <p>
             <span class="label label-what">What</span>
-            Existing PeGS implementations was computationally restrictive for larger
-            granular particles, where the fringe patterns grow complex and the existing methods proved to stall.
+            Existing PeGS implementations were computationally restrictive for larger
+            granular particles, where fringe patterns grow complex and existing methods stalled.
           </p>
           <p>
             <span class="label label-how">How</span>
             Derived closed-form stress-field equations for soft photoelastic disks that
-            replace existing method to formulate. Validated a scaling trick to match the experimental solution and integrated it into Mr. Shins PhD thesis.
+            replace existing method formulations. Validated a scaling trick to match experimental solutions and integrated it into Mr. Shins' PhD thesis.
           </p>
           <p>
             <span class="label label-result">Result</span>
             Achieved a significant reduction in solve time for large-particle configurations,
-            enabling the lab to run larger ensemble experiments. Put my skills and findings from the Young Investigator
-            Workshop, to work ;).
+            enabling the lab to run larger ensemble experiments.
           </p>
         </div>
       </div>
     </div>
 
-    <!-- ═══════════════ TEACHING ═══════════════ -->
+    <h2>Additional Experience Materials</h2>
+    <div class="drive-card">
+      <h3>Google Drive Portfolio Material</h3>
+      <p style="margin-bottom: 14px;">
+        The following materials highlight my past experience:
+        <a href="https://drive.google.com/drive/u/0/folders/1VWB2vyPweWNEGYXx8zvIrXoTDNS_9ZBN" target="_blank" rel="noopener">Open Drive Folder</a>
+      </p>
+      <ul class="drive-list">
+        <li>
+          As an embedded system hobbyist, I worked with 6 other hobbyists in the Electronics Club to develop Versagrip.
+          It was an electro-mechanical adaptation on a glove, to assist paraplegic users with day-to-day fine-motor tasks.
+          I contributed to the development of the ESP32-C3 based PCB and multi-motor control system for the mechanism to operate as intended.
+          (Image in the drive: <b>VersaGrip_V1_V2.png</b>)
+          Also, I interned as an embedded systems intern at JSW Steel, implementing deformation detection using signal preprocessing and rule-based systems.
+        </li>
+        <li>
+          During my junior year in undergrad (Fall semester), I worked with Dr. Anuj Tiwari on a research project titled
+          "Addressing Actuator Delays in Networked Robotic Systems." I developed simulation frameworks and analysis scripts in MATLAB/Simulink
+          to model and evaluate delay effects. In the following semester, I extended this work to
+          "Delay Compensation in Networked Robotic Systems," focusing on observer-based compensation methods
+          (videos attached in the drive: <b>Delayed.mp4</b> &amp; <b>Compensated.mp4</b> implementation).
+        </li>
+        <li>
+          During my research internship at Daniels Lab, I worked on simplifying equations used in the formulation of PeGS,
+          and a method to invasively evaluate the coefficient of friction between soft granular Vishay PhotoStress particles.
+          Visualizations and scripts were developed in MATLAB
+          (presentation in the drive: <b>yiw-poster.pdf</b>).
+        </li>
+        <li>
+          For my B.Tech project, I designed and evaluated a lightweight multi-sensor perception pipeline for a safety-critical autonomous system.
+          The system was implemented in Python using the CARLA simulator, with a focus on robustness and real-time feasibility
+          (presentation in the drive: <b>BTP-ME21B194.pdf</b>).
+        </li>
+        <li>
+          Over the past semester, I worked with Prof. Rahul Mangharam developing simulations based on Non-linear MPC
+          for a long-term initiative of utilizing Learning-to-Optimize framework for Linear Predictive Control in autonomous racing.
+        </li>
+      </ul>
+    </div>
+
     <h2>Lab-side Leadership</h2>
     <div class="teaching-card">
-      <h3>Course Assistant - TinyML (ESE 3600), University of Pennsylvania &nbsp;<span style="font-weight:400;color:#666;">(Aug 2025 – Nov 2025)</span></h3>
+      <h3>Course Assistant - TinyML (ESE 3600), University of Pennsylvania &nbsp;<span style="font-weight:400;color:#64748b;">(Aug 2025 – Nov 2025)</span></h3>
       <p>
         <b>Challenge:</b> The course was migrating its embedded lab infrastructure mid-semester,
         with students needing to port Arduino-IDE workflows to PlatformIO (Espressif IDF) on
@@ -335,7 +431,6 @@
       </p>
     </div>
 
-    <!-- ═══════════════ SKILLS ═══════════════ -->
     <h2>Tools I Wield</h2>
     <div class="skills-grid">
       <div class="skill-card">
@@ -375,17 +470,14 @@
       </div>
     </div>
 
-    <!-- ═══════════════ ACHIEVEMENTS ═══════════════ -->
     <h2>Moments That Mattered</h2>
     <ul class="achievements-list">
       <li>October 2025 : ThinkCAD team accepted into the <b>Wharton Generative AI Studio</b></li>
       <li>May 2025 : Ranked in the <b>top 15%</b> of the 2021–2025 batch at IIT Madras</li>
-
       <li>December 2024 : Selected as a <b>UNAI Millennium Fellow</b>, Class of 2024</li>
       <li>August 2024 : <b>Best Presentation</b>, Young Investigator Workshop — International Soft Matter Conference 2024</li>
-     
-      <li> January 2023 : Vice-Captain of the Institute Squash team @ IIT Madras </li>
-      <li> November 2021 : <b>AIR 2401 (top 1.69%)</b> in JEE Advanced 2021 &nbsp;·&nbsp; <b>AIR 2242 (top 0.24%)</b> in JEE Main 2021</li>
+      <li>January 2023 : Vice-Captain of the Institute Squash team @ IIT Madras</li>
+      <li>November 2021 : <b>AIR 2401 (top 1.69%)</b> in JEE Advanced 2021 &nbsp;·&nbsp; <b>AIR 2242 (top 0.24%)</b> in JEE Main 2021</li>
     </ul>
 
     <footer>
